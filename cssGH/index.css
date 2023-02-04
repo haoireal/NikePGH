@@ -145,11 +145,11 @@ footer{
 }
 
 #content .carousel ol{
-  background-color: #f3f3f371;
-  bottom: -2.5rem;
+  background-color: #f3f3f371 !important;
+  bottom: -2.5rem !important; 
 }
 #content .carousel ol li{
-  background-color: #000000;
+  background-color: #000000 !important;
   
 }
 #content #dontmiss{
