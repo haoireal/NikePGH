@@ -143,3 +143,15 @@ a{
 footer{
   background-color: #000;
 }
+
+#content .carousel ol{
+  background-color: #f3f3f371;
+  bottom: -2.5rem;
+}
+#content .carousel ol li{
+  background-color: #000000;
+  
+}
+#content #dontmiss{
+  margin-top: 4.5rem;
+}
