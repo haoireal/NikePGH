@@ -103,16 +103,20 @@ a {
   color: rgb(0, 0, 0);
   padding: 15px 10px;
 }
-#header .dropdown{
+
+#header .dropdown {
   position: relative;
 }
-#header .dropdown .dropdown-menu{
+
+#header .dropdown .dropdown-menu {
   width: max-content;
   display: none;
 }
-#header .dropdown .dropdown-menu a{
+
+#header .dropdown .dropdown-menu a {
   height: 35px;
 }
+
 #header .dropdown:hover:after {
   content: "";
   position: absolute;
@@ -126,16 +130,19 @@ a {
   display: block;
   margin-top: 0;
 }
-#header .has-search .form-control-feedback{
+
+#header .has-search .form-control-feedback {
   font-size: 20px;
 }
+
 #header .has-search .form-control {
   padding-left: 2.375rem;
   width: 11rem;
   height: 2.5rem;
 }
-@media only screen and (min-width: 992px){
-  #header .has-search .form-control:focus{
+
+@media only screen and (min-width: 992px) {
+  #header .has-search .form-control:focus {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -148,7 +155,7 @@ a {
     border: none;
     color: #63717f;
     z-index: 50;
-    
+
   }
 }
 
@@ -244,7 +251,7 @@ footer .icon-link a i:hover {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 992px) {
   #secondnav.notvisible {
     width: 100%;
     height: 60px;
@@ -254,19 +261,22 @@ footer .icon-link a i:hover {
     transform: translateY(-100%);
     z-index: 5;
   }
-  #secondnav.scrollistop{
+
+  #secondnav.scrollistop {
     position: relative;
   }
-  
+
 }
 
-#secondnav.visible {
-  position:fixed !important;
-  top: 0px;
-  left: 0;
-  right: 0;
-  display: flex;
-  transform: translateY(0);
-  z-index: 10;
+@media only screen and (max-width: 991px) {
+  #secondnav {
+    position: fixed !important;
+    top: 0px;
+    left: 0;
+    right: 0;
+    display: flex;
+    transform: translateY(0);
+    z-index: 10;
 
+  }
 }
