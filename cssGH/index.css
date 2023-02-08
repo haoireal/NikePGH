@@ -265,7 +265,16 @@ footer .icon-link a i:hover {
   #secondnav.scrollistop {
     position: relative;
   }
+  #secondnav.visible {
+    position: fixed !important;
+    top: 0px;
+    left: 0;
+    right: 0;
+    display: flex;
+    transform: translateY(0);
+    z-index: 10;
 
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -275,5 +284,15 @@ footer .icon-link a i:hover {
     left: 0;
     right: 0;
     z-index: 10;
+  }
+  #header .has-search .form-control:focus {
+    transition: transform 0.3s ease;
+    transform: translateX(15%);
+    min-width: 20rem;
+    white-space: nowrap;
+    border: none;
+    color: #63717f;
+    z-index: 50;
+
   }
 }
