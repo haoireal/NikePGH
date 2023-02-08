@@ -11,7 +11,8 @@
     <link class="jordan" rel="icon" href="img/nikeicon.png" />
     <!-- JQWERY -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
-
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -22,8 +23,8 @@
     <link class="jordan" rel="stylesheet" href="cssGH/index.css" />
 </head>
 
-<body>
-    <div class="container-fluid">
+<body ng-app="myapp">
+    <div class="container-fluid" ng-controller="myCtrl">
         <div id="header">
             <!-- firstNAV -->
             <nav class="navbar navbar-light bg-light" id="firstnav">
@@ -43,8 +44,8 @@
             </nav>
 
             <!-- seccondNAV -->
-            <nav class="navbar navbar-expand-lg bg-light text-black bg-white p-0 m-0 navbar-light row" id="secondnav ">
-                <a class="mr-auto nav-link col-sm-0" href="#">
+            <nav class="navbar navbar-expand-lg bg-light text-black bg-white p-0 m-0 navbar-light row " id="secondnav">
+                <a class="mr-auto nav-link col-sm-0 mt-0" href="#">
                     <svg aria-hidden="true" class="pre-logo-svg ml-2" focusable="false" viewBox="0 0 24 24" role="img"
                         width="60px" height="60px" fill="#111" id="nikelogo">
                         <path fill="currentColor" fill-rule="evenodd"
@@ -142,7 +143,7 @@
                                 class="pre-btn-header ripple mr3-sm d-sm-h d-lg-ib rounded-circle"
                                 href="https://www.nike.com/vn/favorites" data-pre="ILink">
                                 <svg width="1em" height="1em" viewBox="0 0 19 19"
-                                    class="bi  justify-content-center text-center  bi-heart" fill="currentColor"
+                                    class="bi justify-content-center text-center bi-heart" fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" class="col-sm-1 justify-content-center text-center"
                                         d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
@@ -153,7 +154,7 @@
                                 class="pre-btn-header ripple mr3-sm d-sm-h d-lg-ib rounded-circle"
                                 href="https://www.nike.com/vn/favorites" data-pre="ILink">
                                 <svg width="1em" height="1em" viewBox="0 0 19 19"
-                                    class="bi  justify-content-center text-center  bi-bag" fill="currentColor"
+                                    class="bi justify-content-center text-center  bi-bag" fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" class="col-sm-1 justify-content-center text-center "
                                         d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z" />
@@ -276,8 +277,7 @@
             <!-- PRODUCTS -->
             <h4 class="container-fluid mt-5">In The Spotlight</h4>
             <!-- SOMETHING RIGHT HERE! -->
-            <div id="my-pics" class="carousel slide mb-5 position-relative"
-                data-ride="carousel">
+            <div id="my-pics" class="carousel slide mb-5 position-relative" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators m-0 position-absolute fixed-bottom" id="active-carousel">
                     <li data-target="#my-pics" onclick="" data-slide-to="0" class="active"></li>
@@ -343,7 +343,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/nam90.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Nike Air Force Mid 90</h5>
                                         <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
                                     </div>
@@ -355,7 +355,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/namSC.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Nike Air Force Mid SC</h5>
                                         <p class="" style="font-size: 0.7rem;">Kid's Shoes</p>
                                     </div>
@@ -367,7 +367,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6 ">
                                 <img src="img/nbmv.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Nike Boot Mid LV7</h5>
                                         <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
                                     </div>
@@ -379,7 +379,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/jordand3l.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Nike Jordan 3 Low</h5>
                                         <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
                                     </div>
@@ -388,14 +388,14 @@
                                     </p>
                                 </div>
                             </a>
-                    </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <div class="lider row container-fluid ml-0 p-0">
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/nomc.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Nike One Mid C</h5>
                                         <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
                                     </div>
@@ -407,7 +407,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/naj1mSEK.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
                                         <p class="" style="font-size: 0.7rem;">Older Kids' Shoes</p>
                                     </div>
@@ -419,7 +419,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6 ">
                                 <img src="img/naj1mSEM.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
                                         <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
                                     </div>
@@ -431,7 +431,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/naj1mSEW.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
                                         <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
                                     </div>
@@ -440,14 +440,14 @@
                                     </p>
                                 </div>
                             </a>
-                    </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <div class="lider row container-fluid ml-0 p-0">
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/naj1mNau.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid</h5>
                                         <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
                                     </div>
@@ -459,7 +459,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/ndunkhight.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Nike Dunk High</h5>
                                         <p class="" style="font-size: 0.7rem;">Older Kids' Shoes</p>
                                     </div>
@@ -471,7 +471,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6 ">
                                 <img src="img/ndunkhightSE.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Nike Dunk High SE</h5>
                                         <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
                                     </div>
@@ -483,7 +483,7 @@
                             <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
                                 <img src="img/ndunkhightretro.jpg" class="img-fluid" alt="">
                                 <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font" >
+                                    <div class=" p-0  col-xl-7 col-6 font">
                                         <h5 class="" style="font-size: 1rem;">Nike Dunk High Retro</h5>
                                         <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
                                     </div>
@@ -492,10 +492,10 @@
                                     </p>
                                 </div>
                             </a>
-                    </div>
+                        </div>
                     </div>
                 </div>
-                
+
             </div>
 
 
@@ -620,7 +620,8 @@
 
                 </div>
                 <!-- Social -->
-                <div class="col-md-4 col-lg-3 col-xl-5 mx-auto mb-md-0 mb-4 pt-5 ml-0 col-sm-5 icon-link justify-content-end text-right">
+                <div
+                    class="col-md-4 col-lg-3 col-xl-5 mx-auto mb-md-0 mb-4 pt-5 ml-0 col-sm-5 icon-link justify-content-end text-right">
                     <div class="col">
                         <a href="https://twitter.com/Nike" class="me-4 text-reset text-decoration-none ">
                             <i class="justify-content-center text-center rounded-circle fab fa-twitter"></i>
@@ -643,15 +644,47 @@
 
         <!-- Copyright -->
         <div class="p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            
+
             <a href="#!" class="font-weight-bold mr-4"><i class="fas fa-map-marker-alt mr-3"></i>Vietnam</a>
             © 2023 Nike, Inc. All Rights Reserved
         </div>
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script>
+        const header = document.querySelector("#secondnav");
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (st > lastScrollTop) {
+                header.classList.remove("visible");
+                header.classList.add("notvisible");
+
+                console.log("Scrolling down");
+
+            } else {
+                header.classList.add("visible");
+                header.classList.remove("notvisible");
+                if(st == 0){
+                 header.classList.remove("visible");
+
+            }
+                console.log("Scrolling up");
+
+            }
+            
+            lastScrollTop = st <= 0 ? 0 : st;
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
