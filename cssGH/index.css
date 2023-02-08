@@ -103,22 +103,55 @@ a {
   color: rgb(0, 0, 0);
   padding: 15px 10px;
 }
-
-#header .dropdown:hover {
+#header .dropdown{
+  position: relative;
+}
+#header .dropdown .dropdown-menu{
+  width: max-content;
+  display: none;
+}
+#header .dropdown .dropdown-menu a{
+  height: 35px;
+}
+#header .dropdown:hover:after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  width: 100%;
   border-bottom: 2px solid black;
-  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 #header .dropdown:hover>.dropdown-menu {
   display: block;
-  margin-top: 5px;
+  margin-top: 0;
 }
-
+#header .has-search .form-control-feedback{
+  font-size: 20px;
+}
 #header .has-search .form-control {
   padding-left: 2.375rem;
   width: 11rem;
   height: 2.5rem;
 }
+@media only screen and (min-width: 992px){
+  #header .has-search .form-control:focus{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    min-width: 40rem;
+    position: absolute;
+    white-space: nowrap;
+    border: none;
+    color: #63717f;
+    z-index: 50;
+    
+  }
+}
+
 
 #header .has-search .form-control-feedback {
   position: absolute;
@@ -211,20 +244,22 @@ footer .icon-link a i:hover {
   text-decoration: none;
 }
 
-
-
-#secondnav.notvisible {
-  width: 100%;
-  height: 60px;
-  position: sticky;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-  transform: translateY(-100%);
-  z-index: 5;
+@media only screen and (min-width: 992px){
+  #secondnav.notvisible {
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+    z-index: 5;
+  }
+  #secondnav.scrollistop{
+    position: relative;
+  }
+  
 }
-#secondnav.scrollistop{
-  position: relative;
-}
+
 #secondnav.visible {
   position:fixed !important;
   top: 0px;
