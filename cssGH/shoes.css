@@ -1,0 +1,33 @@
+.aside-container {
+    display: flex;
+    height: 200px;
+    position:sticky;
+    top: 54.72px;
+  }
+  
+  aside {
+    overflow-y: scroll;
+    width: 300px;
+    height: 100%;
+  }
+  #header-content{
+    position:sticky;
+    top: 0px;
+    z-index: 9;
+    background-color: white;
+  }
+  @media only screen and (max-width: 767px) {
+    #contentMen-Shoes .aside-container {
+      display: none;
+  
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    #header-content h4 {
+font-size: 1.3rem;  
+    }
+    #header-content button{
+font-size: 0.8rem;  
+
+    }
+  }

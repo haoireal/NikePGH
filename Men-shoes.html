@@ -21,6 +21,7 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- My CSS -->
     <link class="jordan" rel="stylesheet" href="cssGH/index.css" />
+    <link rel="stylesheet" href="cssGH/shoes.css">
 </head>
 
 <body ng-app="myapp">
@@ -45,7 +46,7 @@
 
             <!-- seccondNAV -->
             <nav class="navbar navbar-expand-lg bg-light text-black bg-white p-0 m-0 navbar-light col " id="secondnav">
-                <a class="mr-auto nav-link col-sm-0 mt-0" href="#">
+                <a class="mr-auto nav-link col-sm-0 mt-0" href="index.html">
                     <svg aria-hidden="true" class="pre-logo-svg ml-2" focusable="false" viewBox="0 0 24 24" role="img"
                         width="60px" height="60px" fill="#111" id="nikelogo">
                         <path fill="currentColor" fill-rule="evenodd"
@@ -168,189 +169,51 @@
         <div class="wall-header-offset p-1"></div>
 
         <div id="header-content" class="row container-fluid m-0 mt-4 justify-content-center">
-            <h4 class="col-xl-10 p-0 m-0">Men's Shoes(374)</h4>
-            
-            <div id="hide-sort" class="col-xl-2 p-0 m-0 d-flex justify-content-end">
-                <button class=" border-0 p-0 pr-3 bg-white font-weight-lighter">Show Filters <i class="fas fa-sliders-h"></i></button>
-                <button class=" border-0 p-0 pl-3 bg-white font-weight-lighter">Sort by <i class="fa fa-angle-up"></i></button>
+            <h4 class="col-xl-10 col-md-8 col-sm-5 col-6 p-0 m-0">Men's Shoes(374)</h4>
+
+            <div id="hide-sort" class="col-xl-2 col-md-4 col-sm-6 col-6 p-0 m-0 d-flex justify-content-end">
+                <button class=" border-0 p-0 pr-3 bg-white font-weight-lighter">Show Filters <i
+                        class="fas fa-sliders-h"></i></button>
+                <button class=" border-0 p-0 pl-3 bg-white font-weight-lighter">Sort by <i
+                        class="fa fa-angle-up"></i></button>
             </div>
         </div>
         <div class="wall-header-offset p-3"></div>
         <div id="contentMen-Shoes" class="container-flui row">
             <!-- ASIDE -->
-            <div id="aside " class="col-xl-3">
-
-
+            <div class="aside-container col-xl-3 col-md-4">
+                <aside>
+                    
+                </aside>
             </div>
+
 
 
             <!-- PRODUCT MEN-SHOES -->
-            <div id="my-pics" class="carousel slide mb-5 position-relative col-xl-9" data-ride="carousel">
+            <div id="my-pics" class="mb-5 position-relative col-xl-9 col-md-8">
                 <!-- Indicators -->
-                    <div class="carousel-item active">
-                        <div class="lider row container-fluid ml-0 p-0">
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  ">
-                                <img src="img/naf1b.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force 1 '07 LV8</h5>
-                                        <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,829,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6 ">
-                                <img src="img/naf1c.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force 1 '07 LV7</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,519,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  ">
-                                <img src="img/naf1d.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force 1 '05</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,599,000₫
-                                    </p>
-                                </div>
-                            </a>
+                <!-- PRODUCT-ROW-COL3 -->
+                <div class="lider row container-fluid ml-0 p-0">
+                    <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  "
+                        ng-repeat="p in products">
+                        <img src="img/men/{{p.image}}" class="img-fluid" alt="">
+                        <div class=" row pb-0 justify-content-center">
+                            <div class=" p-0  col-xl-7 col-6 font">
+                                <h5 class="" style="font-size: 1rem;">{{p.name}}</h5>
+                                <p class="" style="font-size: 0.7rem;">{{p.des}}</p>
+                            </div>
+                            <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
+                                {{p.price}}₫
+                            </p>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="lider row container-fluid ml-0 p-0">
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  ">
-                                <img src="img/namSC.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force Mid SC</h5>
-                                        <p class="" style="font-size: 0.7rem;">Kid's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        4,519,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6 ">
-                                <img src="img/nbmv.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Boot Mid LV7</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        5,519,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  ">
-                                <img src="img/jordand3l.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Jordan 3 Low</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,499,000₫
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="lider row container-fluid ml-0 p-0">
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  ">
-                                <img src="img/naj1mSEK.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
-                                        <p class="" style="font-size: 0.7rem;">Older Kids' Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        2,929,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6 ">
-                                <img src="img/naj1mSEM.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,829,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  ">
-                                <img src="img/naj1mSEW.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
-                                        <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,829,000₫
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="lider row container-fluid ml-0 p-0">
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  ">
-                                <img src="img/ndunkhight.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Dunk High</h5>
-                                        <p class="" style="font-size: 0.7rem;">Older Kids' Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        2,549,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6 ">
-                                <img src="img/ndunkhightSE.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Dunk High SE</h5>
-                                        <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,669,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  ">
-                                <img src="img/ndunkhightretro.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Dunk High Retro</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,118,649₫
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    </a>
 
+                </div>
+
+                <!-- END PRODUCT MEN SHOES  -->
             </div>
 
-
+            <!-- END CONTENT-MEN-SHOES -->
         </div>
     </div>
     <!-- Footer -->
@@ -480,6 +343,226 @@
 
             lastScrollTop = st <= 0 ? 0 : st;
         });
+        var app = angular.module("myapp", []).controller("myCtrl", function ($scope) {
+            $scope.products = [
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Force 1 '07 LV8",
+                    image: "m1.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Revolution 6 Next Nature",
+                    image: "m2.jpg",
+                    price: "1,759,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Invincible 3",
+                    image: "m3.jpg",
+                    price: "5,279,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Air Jordan 1 Zoom CMFT 2",
+                    image: "m4.jpg",
+                    price: "4,259,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Force 1 '07",
+                    image: "m5.jpg",
+                    price: "3,239,000"
+                }, {
+                    des: "Men's Shoes",
+                    name: "Nike Pegasus 39",
+                    image: "m6.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Max Alpha Trainer 5",
+                    image: "m7.jpg",
+                    price: "2,499,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Pegasus FlyEase",
+                    image: "m8.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Max 90 SE",
+                    image: "m9.jpg",
+                    price: "4,109,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Force 1 High '07 LV8",
+                    image: "m10.jpg",
+                    price: "3,959,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Max 97 SE",
+                    image: "m11.jpg",
+                    price: "5,589,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Max Excee",
+                    image: "m12.jpg",
+                    price: "2,649,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Waffle One SE",
+                    image: "m13.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Pegasus 39 Premium",
+                    image: "m14.jpg",
+                    price: "3,819,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Force 1 '07 LV8",
+                    image: "m15.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Max Dawn SE",
+                    image: "m16.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Infinity React 3 Premium",
+                    image: "m17.jpg",
+                    price: "4,999,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "NikeCourt Zoom Vapor Cage 4 Rafa",
+                    image: "m18.jpg",
+                    price: "4,419,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Offcourt",
+                    image: "m19.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Alphafly 2",
+                    image: "m20.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Gripknit Phantom GX Elite FG",
+                    image: "m21.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Vaporfly 2",
+                    image: "m22.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Force 1 '07 LV8",
+                    image: "m23.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Air Jordan 1 Mid SE Craft",
+                    image: "m24.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Air Jordan 1 Low SE",
+                    image: "m25.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Jordan Super Play",
+                    image: "m26.jpg",
+                    price: "1,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "JordanNike Burrow SE",
+                    image: "m27.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Air Trainer 1",
+                    image: "m28.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Venture Runner",
+                    image: "m29.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Air Jordan XXXVII PF",
+                    image: "m30.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Air Jordan Legacy 312",
+                    image: "m31.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike E-Series 1.0",
+                    image: "m32.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Court Vision Low",
+                    image: "m33.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Dunk Low",
+                    image: "m34.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Nike Dunk Low",
+                    image: "m35.jpg",
+                    price: "3,519,000"
+                },
+                {
+                    des: "Men's Shoes",
+                    name: "Air Jordan 1 Zoom CMFT",
+                    image: "m36.jpg",
+                    price: "3,519,000"
+                }
+            ];
+        });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
