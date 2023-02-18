@@ -167,7 +167,7 @@
 </style>
 
 <body ng-app="myapp">
-    <div class="container-fluid" ng-controller="myCtrl">
+    <div class="container-fluid">
 
         <!-- PRODUCT DETAIL -->
         <div class="product-detail">
@@ -206,7 +206,7 @@
 
                 <div class="detail-pd col-12 col-sm-12 col-md-4 col-xl-4 container" ng-model="product">
                     <h2>{{product.name}}</h2>
-                    <p class="mt-2">{{product.des}}</p>
+                    <p class="mt-2">{{product.des}} </p>
 
                     <p class="mb-5">{{product.price}}</p>
                     <p class="mt-5">Select Size</p>
@@ -472,16 +472,16 @@
 
     <script>
         
-        var app = angular.module("myapp", []).controller("myCtrl", function ($scope, $http) {
-            $scope.product = {
+        // var app = angular.module("myapp", []).controller("myCtrl", function ($scope, $http) {
+        //     $scope.product = {
 
-            };
-            $http.get('Data/men-products.json').then(function (reponse) {
-                $scope.product = reponse.data[0];
-                console.log($scope.product)
+        //     };
+        //     $http.get('Data/men-products.json').then(function (reponse) {
+        //         $scope.product = reponse.data[0];
+        //         console.log($scope.product)
 
-            });
-        });
+        //     });
+        // });
         // Initialize the carousel
         $(document).ready(function () {
             $("#product-carousel").carousel();
@@ -492,10 +492,7 @@
             $("#product-carousel").carousel("dispose");
             $("#product-carousel").carousel();
         });
-        app.controller('SizeController', function ($scope) {
-            $scope.sizes = ['EU 36.5', 'EU 37', 'EU 38', 'EU 38.5', 'EU 39', 'EU 40', 'EU 41', 'EU 42'];
-
-        });
+        
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

@@ -12,7 +12,8 @@
     <!-- JQWERY -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
     <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -23,7 +24,8 @@
     <link class="jordan" rel="stylesheet" href="cssGH/index.css" />
 </head>
 
-<body ng-app="myapp">
+<body >
+
     <div class="container-fluid" ng-controller="myCtrl">
         <div id="header">
             <!-- firstNAV -->
@@ -45,7 +47,7 @@
 
             <!-- seccondNAV -->
             <nav class="navbar navbar-expand-lg bg-light text-black bg-white p-0 m-0 navbar-light col " id="secondnav">
-                <a class="mr-auto nav-link col-sm-0 mt-0" href="#">
+                <a class="mr-auto nav-link col-sm-0 mt-0" href="#!homepage">
                     <svg aria-hidden="true" class="pre-logo-svg ml-2" focusable="false" viewBox="0 0 24 24" role="img"
                         width="60px" height="60px" fill="#111" id="nikelogo">
                         <path fill="currentColor" fill-rule="evenodd"
@@ -69,7 +71,7 @@
                             </a>
                             <div class="dropdown-menu row justify-content-center container-fluid"
                                 aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="Men-shoes.html">Shoes</a>
+                                <a class="dropdown-item" href="#!menshoes">Shoes</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Clothing</a>
                                 <a class="dropdown-item" href="#">Gear</a>
@@ -83,7 +85,7 @@
                                 Women
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="Women-sshoes.html">Shoes</a>
+                                <a class="dropdown-item" href="#!womenshoes">Shoes</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Yoga
                                 </a>
@@ -165,392 +167,16 @@
                 </div>
             </nav>
         </div>
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="alert bg-light border-0 alert-secondary" role="alert">
-                        Hello Nike App <a href="#" class="alert-light">View detail</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="alert bg-light border-0 alert-secondary" role="alert">
-                        Save up to 40% <a href="#" class="alert-link">Get Your Great</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="alert bg-light border-0 alert-secondary" role="alert">
-                        Shop All Our New Markdowns <a href="#" class="alert-link">Get Now</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="alert bg-light border-0 alert-secondary" role="alert">
-                        Free Delivery Applies to orders of 5.000.000₫ or more. <a href="#" class="alert-link">View
-                            details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- JUMBOTRON -->
-        <div class="jumbotron"
-            style="background-image: url( https://static.nike.com/a/images/f_auto/dpr_1.0/w_1332,c_limit/56c630ea-b946-49dd-bcd8-a0cf5530aa3d/nike-just-do-it.jpg ); background-size: 100%">
-            <h1 class="display-5">Step into a New Air</h1>
-            <p class="lead"></p>
-            <hr class="my-2">
-            <p>Featuring the new Air Max 270 React</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Shop</a>
-        </div>
-
-        <div id="content">
-            <!-- TITLE -->
-            <div class="text-center card-title" data-qa="card-overlay">
-                <div class="" data-qa="card-overlay-content">
-                    <p data-qa="subtitle" class="eadline-5 text-color-primary-dark mb-0 mt-5" style="color:#111111">Nike
-                        Invincible</p>
-                    <h1 data-qa="title" class=" text-color-primary-dark font-weight-bold" id="feel-it"
-                        style="color:#111111">FEEL IT TO BELIEVE IT
-                    </h1>
-                    <p data-qa="body" class="body-2 mt6-sm mt-3 mb-1 text-color-primary-dark" style="color:#111111">
-                        Introducing
-                        lightweight ZoomX cushioning through every mile—run in the Nike Invincible 3.</p>
-                    <div class="mb-5 mt-5" data-qa="cta-container">
-                        <button href="#ban-giay-Runing" target="_self"
-                            class="btn-dark rounded-pill font-weight-bold p-1 pl-4 pr-4  mr-1" data-button-type="button"
-                            aria-label="Shop">Shop
-                        </button>
-                        <button class="btn-dark rounded-pill p-1 pl-4 pr-4 ml-1" data-button-type="play-button"
-                            aria-label="Watch">Watch
-                            <i class="fas fa-play "></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2 BUC ANH -->
-            <h4 class="container-fluid mt-2 ">Featured</h4>
-            <div class="row container-fluid justify-content-center mt-2">
-                <div class="jumbotron mr-2"
-                    style="background-image: url( img/feature1.jpg); height: 33rem;width: 37.5rem; ">
-                    <h1 class="h5  text-wrap">Valentine’s Day Looks</h1>
-                    <p class="h5 font-weight-bold ">Partner Up and Reach Those Goals</p>
-                    <button href="#ban-giay-Runing" target="_self" class="btn-light rounded-pill  p-1 pl-4 pr-4  mr-1"
-                        data-button-type="button" aria-label="Shop">Explore
-                    </button>
-                    <button class="btn-light rounded-pill p-1 pl-4 pr-4 ml-1" data-button-type="play-button"
-                        aria-label="Watch">Top 10 gifts
-                        <i class="far fa-eye"></i>
-                    </button>
-
-                </div>
-                <div class="jumbotron ml-2"
-                    style="background-image: url( img/feature2.jpg); height: 33rem;width: 37.5rem;">
-                    <h1 class="h5 text-wrap">Nike App Early Access</h1>
-                    <p class="h5 font-weight-bold ">Nike Air Dunk Jumbo</p>
-                    <button href="#ban-giay-Runing" target="_self" class="btn-light rounded-pill  p-1 pl-4 pr-4  mr-1"
-                        data-button-type="button" aria-label="Shop">Get It First
-                    </button>
-                </div>
-            </div>
-
-
-            <!-- THE LATEST -->
-            <h4 class="container-fluid mt-5">The Latest</h4>
-            <img src="img/thelast.jpg" class="img-fluid container-fluid mt-2" alt="">
-            <div class="text-center card-title" data-qa="card-overlay">
-                <div class="" data-qa="card-overlay-content">
-                    <h1 data-qa="title" class=" text-color-primary-dark font-weight-bolder mt-5" id="feel-it"
-                        style="color:#111111">Jordan X Paris Saint-Germain
-                    </h1>
-                    <p data-qa="body" class="body-2 mt6-sm mt-3 mb-1 text-color-primary-dark" style="color:#111111">
-                        The new Jordan x Paris Saint-Germain Collection draws on the light that Paris shines on the
-                        world stage.</p>
-                    <div class="mb-5 mt-5" data-qa="cta-container">
-                        <button href="#ban-giay-Runing" target="_self"
-                            class="btn-dark rounded-pill font-weight-bold p-1 pl-4 pr-4  mr-1" data-button-type="button"
-                            aria-label="Shop">Shop Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- PRODUCTS -->
-            <h4 class="container-fluid mt-5">In The Spotlight</h4>
-            <!-- SOMETHING RIGHT HERE! -->
-            <div id="my-pics" class="carousel slide mb-5 position-relative" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators m-0 position-absolute fixed-bottom" id="active-carousel">
-                    <li data-target="#my-pics" onclick="" data-slide-to="0" class="active"></li>
-                    <li data-target="#my-pics" data-slide-to="1"></li>
-                    <li data-target="#my-pics" data-slide-to="2"></li>
-                    <li data-target="#my-pics" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner " id="active-carousel-product">
-                    <div class="carousel-item active">
-                        <div class="lider row container-fluid ml-0 p-0">
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/naf1a.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force 1 '07</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,519,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/naf1b.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force 1 '07 LV8</h5>
-                                        <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,829,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6 ">
-                                <img src="img/naf1c.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force 1 '07 LV7</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,519,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/naf1d.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force 1 '05</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,599,000₫
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="lider row container-fluid ml-0 p-0">
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/nam90.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force Mid 90</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        2,919,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/namSC.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Air Force Mid SC</h5>
-                                        <p class="" style="font-size: 0.7rem;">Kid's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        4,519,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6 ">
-                                <img src="img/nbmv.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Boot Mid LV7</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        5,519,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/jordand3l.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Jordan 3 Low</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,499,000₫
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="lider row container-fluid ml-0 p-0">
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/nomc.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike One Mid C</h5>
-                                        <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        2,519,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/naj1mSEK.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
-                                        <p class="" style="font-size: 0.7rem;">Older Kids' Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        2,929,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6 ">
-                                <img src="img/naj1mSEM.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,829,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/naj1mSEW.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid SE</h5>
-                                        <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,829,000₫
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="lider row container-fluid ml-0 p-0">
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/naj1mNau.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Air Jordan 1 Mid</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,669,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/ndunkhight.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Dunk High</h5>
-                                        <p class="" style="font-size: 0.7rem;">Older Kids' Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        2,549,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6 ">
-                                <img src="img/ndunkhightSE.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Dunk High SE</h5>
-                                        <p class="" style="font-size: 0.7rem;">Women's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,669,000₫
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="" class="media-container justify-content-center col-xl-3  col-md-3 col-6  ">
-                                <img src="img/ndunkhightretro.jpg" class="img-fluid" alt="">
-                                <div class=" row pb-0 justify-content-center">
-                                    <div class=" p-0  col-xl-7 col-6 font">
-                                        <h5 class="" style="font-size: 1rem;">Nike Dunk High Retro</h5>
-                                        <p class="" style="font-size: 0.7rem;">Men's Shoes</p>
-                                    </div>
-                                    <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                        3,118,649₫
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- Don't Miss -->
-            <h4 id="dontmiss" class="container-fluid">Don't Miss</h4>
-            <img src="img/Don't Miss.jpg" class="img-fluid container-fluid mt-2" alt="">
-            <div class="text-center card-title" data-qa="card-overlay">
-                <div class="" data-qa="card-overlay-content">
-                    <p data-qa="subtitle" class="eadline-5 text-color-primary-dark mb-0 mt-5" style="color:#111111">Nike
-                        Free Metcon 4</p>
-                    <h1 data-qa="title" class=" text-color-primary-dark font-weight-bolder" id="feel-it"
-                        style="color:#111111">GO ALL OUT
-                    </h1>
-                    <p data-qa="body" class="body-2 mt6-sm mt-3 mb-1 text-color-primary-dark" style="color:#111111">
-                        Lift. Jump. Pivot. With a mix of flexibility and stability,
-                        this training shoe helps you get the most out of every movement.</p>
-                    <div class="mb-5 mt-5" data-qa="cta-container">
-                        <button href="#ban-giay-Runing" target="_self"
-                            class="btn-dark rounded-pill font-weight-bold p-1 pl-4 pr-4  mr-1" data-button-type="button"
-                            aria-label="Shop">Shop
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- 2 PICTURE BOOTSTRAP-->
-            <div class="row container-fluid m-0">
-                <div class="card col-md-6">
-                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0a5b4d15-b6fd-42b5-b437-03a7477c32c9/jordan-jumpman-air-mens-fleece-pullover-hoodie-NLJ6CZ.jpg"
-                        class="card-img-top" alt="...">
-
-                    <div class="card-body">
-                        <p class="card-text">Men Shoes</p>
-                        <button type="button" class="btn btn-dark">Shop</button>
-                    </div>
-                </div>
-
-                <div class="card col-md-6">
-                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d5041b85-776b-4588-af8c-5e6f10974cfc/swoosh-luxe-womens-medium-support-sports-bra-qZgDMT.jpg"
-                        class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">Women Shoes</p>
-                        <button type="button" class="btn btn-dark">Shop</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
 
 
     </div>
+    <div ng-app="myapp" ng-view></div>
+
     <!-- FOOTER -->
     <!-- Footer -->
     <footer class="justify-content-center text-lg-start text-muted mt-5">
         <!-- Section: Links  -->
+
         <section class="">
             <div class="justify-content-center text-md-start m-0 row">
                 <!-- Grid row -->
@@ -649,6 +275,7 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+    
     <script>
         const header = document.querySelector("#secondnav");
         let lastScrollTop = 0;
@@ -675,6 +302,7 @@
 
             lastScrollTop = st <= 0 ? 0 : st;
         });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -682,7 +310,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-
+        <script src="js/app.js"></script>
 </body>
 
 </html>

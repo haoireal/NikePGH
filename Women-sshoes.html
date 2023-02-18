@@ -12,7 +12,8 @@
     <!-- JQWERY -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
     <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -25,147 +26,8 @@
 </head>
 
 <body ng-app="myapp">
-    <div class="container-fluid" ng-controller="myCtrl">
-        <div id="header" class="mb-5">
-            <!-- firstNAV -->
-            <nav class="navbar navbar-light bg-light" id="firstnav">
-                <span class="navbar-brand mb-0 h1\" id="iconman">
-                    <svg height="24px" width="24px" fill="#111" viewBox="0 0 26 32">
-                        <path
-                            d="M14.4 5.52v-.08q0-.56.36-1t.92-.44 1 .36.48.96-.36 1-.96.4l-.24.08.08.12-.08.44-.16 1.28q.08.08.08.16l-.16.8q-.08.16-.16.24l-.08.32q-.16.64-.28 1.04t-.2.64V12q-.08.4-.12.64t-.28.8q-.16.32 0 1.04l.08.08q0 .24.2.56t.2.56q.08 1.6-.24 2.72l.16.48q.96.48.56 1.04l.4.16q.96.48 1.36.84t.8.76q.32.08.48.24l.24.08q1.68 1.12 3.36 2.72l.32.24v.08l-.08.16.24.16h.08q.24.16.32.16h.08q.08 0 .16-.08l.16-.08q.16-.16.32-.24h.32q.08 0 0 .08l-.32.16-.4.48h.56l.56.08q.24-.08.4-.16l.4-.24q.24-.08.48.16h.08q.08.08-.08.24l-.96.88q-.4.32-.72.4l-1.04.72q-.08.08-.16 0l-.24-.32-.16-.32-.2-.28-.24-.32-.2-.24-.16-.2-.32-.24q-.16 0-.32-.08l-1.04-.8q-.24 0-.56-.24-1.2-1.04-1.6-1.28l-.48-.32-.96-.16q-.48-.08-1.28-.48l-.64-.32q-.64-.32-.88-.32l-.32-.16q-.32-.08-.48-.16l-.16-.16q-.16 0-.32.08l-1.6.8-2 .88q-.8.64-1.52 1.04l-.88.4-1.36.96q-.16.16-.32 0l-.16.16q-.24.08-.32.08l-.32.16v.16h-.16l-.16.24q-.16.32-.32.36t-.2.12-.08.12l-.16.16-.24.16-.36-.04-.48.08-.32.08q-.4.08-.64-.12t-.4-.6q-.16-.24.16-.4l.08-.08q.08-.08.24-.08h.48L1.6 26l.32-.08q0-.16.08-.24.08-.08.24-.08v-.08q-.08-.16-.08-.32-.08-.16-.04-.24t.08-.08h.04l.08.24q.08.4.24.24l.08-.16q.08-.16.24-.16l.16.16.16-.16-.08-.08q0-.08.08-.08l.32-.32q.4-.48.96-.88 1.12-.88 2.4-1.36.4-.4.88-.4.32-.56.96-1.2.56-.4.8-.56.16-.32.4-.32H10l.16-.16q.16-.08.24-.16v-.4q0-.4.08-.64t.4-.24l.32-.32q-.16-.32-.16-.72h-.08q-.16-.24-.16-.48-.24-.4-.32-.64h-.24q-.08.24-.4.32l-.08.16q-.32.56-.56.84t-.88.68q-.4.4-.56.88-.08.24 0 .48l-.08.16h.08q0 .16.08.16h.08q.16.08.16.2t-.24.08-.36-.16-.2-.12l-.24.24q-.16.24-.32.2t-.08-.12l.08-.08q.08-.16 0-.16l-.64.16q-.08.08-.2 0t.04-.16l.4-.16q0-.08-.08-.08-.32.16-.64.08l-.4-.08-.08-.08q0-.08.08-.08.32.08.8-.08l.56-.24.64-.72.08-.16q.32-.64.68-1.16t.76-.84l.08-.32q.16-.32.32-.56t.4-.64l.24-.32q.32-.48.72-.48l.24-.24q.08-.08.08-.24l.16-.16-.08-.08q-.48-.4-.48-.72-.08-.56.36-.96t.88-.36.68.28l.16.16q.08 0 .08.08l.32.16v.24q.16.16.16.24.16-.24.48-.56l.4-1.28q0-.32.16-.64l.16-.24v-.16l.24-.96h.16l.24-.96q.08-.24 0-.56l-.32-.8z">
-                        </path>
-                    </svg>
-                </span>
-                <ul class="breadcrumb navbar-brand mb-0 h1\ mr-auto float-end" id="jordanmenu">
-                    <li class="jordan"><a href="#">Find a Store</a></li>
-                    <li class="jordan"><a href="#">Help</a></li>
-                    <li class="jordan"><a href="#">Join Us</a></li>
-                    <li class="jordan"><a href="#">Sign in</a></li>
-                </ul>
-            </nav>
-
-            <!-- seccondNAV -->
-            <nav class="navbar navbar-expand-lg bg-light text-black bg-white p-0 m-0 navbar-light col " id="secondnav">
-                <a class="mr-auto nav-link col-sm-0 mt-0" href="index.html">
-                    <svg aria-hidden="true" class="pre-logo-svg ml-2" focusable="false" viewBox="0 0 24 24" role="img"
-                        width="60px" height="60px" fill="#111" id="nikelogo">
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" class=""
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse col-sm-8 row justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto justify-content-center col-sm-6">
-                        <!-- menu Men -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Men
-                            </a>
-                            <div class="dropdown-menu row justify-content-center container-fluid"
-                                aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Shoes</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Clothing</a>
-                                <a class="dropdown-item" href="#">Gear</a>
-                            </div>
-
-                        </li>
-                        <!-- menu Women -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Women
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Shoes</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Yoga
-                                </a>
-                                <a class="dropdown-item" href="#">Maternity
-                                </a>
-                            </div>
-                        </li>
-                        <!-- menu Kids -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Kids
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Shoes</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">T-Shirts</a>
-                                <a class="dropdown-item" href="#">Hoodies & Sweatshirts</a>
-                            </div>
-                        </li>
-                        <!-- menu Customies  -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Customies
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Newest</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Men</a>
-                                <a class="dropdown-item" href="#">Women</a>
-                            </div>
-                        </li>
-                        <!-- menu Sale -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">Sale</a>
-                        </li>
-                        <!-- Menu SNKRS -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">SNKRS</a>
-                        </li>
-                    </ul>
-                    <!-- SEARCH VÀ TRÁI TIM VÀ GIỎ HÀNG -->
-                    <form class="form-inline my-2 my-lg-0 col-sm-5 row">
-                        <div class="form-group has-search col-xl-6 col-md-6">
-                            <span class="fa fa-search form-control-feedback"></span>
-                            <input id="search-bar" type="text" class="form-control rounded-pill bg-light border-0"
-                                placeholder="Search">
-                        </div>
-                        <div class="col-sm-5 ml-1 container-fluid pr-0 mr-0 justify-content-end text-right">
-                            <a aria-label="Favourites" title="Favourites" data-var="favoritesLink"
-                                data-type="click_navShortcut" data-path="favorites"
-                                class="pre-btn-header ripple mr3-sm d-sm-h d-lg-ib rounded-circle"
-                                href="https://www.nike.com/vn/favorites" data-pre="ILink">
-                                <svg width="1em" height="1em" viewBox="0 0 19 19"
-                                    class="bi justify-content-center text-center bi-heart" fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        class="col-xl-2 col-md-1 justify-content-center text-center"
-                                        d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                                </svg>
-                            </a>
-                            <a aria-label="Favourites" title="Favourites" data-var="favoritesLink"
-                                data-type="click_navShortcut" data-path="favorites"
-                                class="pre-btn-header ripple mr3-sm d-sm-h d-lg-ib rounded-circle"
-                                href="https://www.nike.com/vn/favorites" data-pre="ILink">
-                                <svg width="1em" height="1em" viewBox="0 0 19 19"
-                                    class="bi justify-content-center text-center  bi-bag" fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        class="col-xl-2 col-md-1 justify-content-center text-center "
-                                        d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5H2z" />
-                                </svg>
-                            </a>
-
-                        </div>
-                    </form>
-
-                </div>
-            </nav>
-        </div>
+    <div class="container-fluid">
+        
         <div class="wall-header-offset p-1"></div>
 
         <div id="header-content" class="row container-fluid m-0 mt-4 justify-content-center">
@@ -279,24 +141,27 @@
 
 
 
-            <!-- PRODUCT MEN-SHOES -->
+            <!-- PRODUCT Women-SHOES -->
             <div id="my-pics" class="mb-5 position-relative col-xl-9 col-md-8">
                 <!-- Indicators -->
                 <!-- PRODUCT-ROW-COL3 -->
                 <div class="lider row container-fluid ml-0 p-0">
-                    <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  "
+                    <div class="media-container justify-content-center col-xl-4 col-md-4 col-6  "
                         ng-repeat="p in products">
-                        <img src="img/women/{{p.image}}" class="img-fluid" alt="">
-                        <div class=" row pb-0 justify-content-center">
-                            <div class=" p-0  col-xl-7 col-6 font">
-                                <h5 class="" style="font-size: 1rem;">{{p.name}}</h5>
-                                <p class="" style="font-size: 0.7rem;">{{p.des}}</p>
+
+                        <a href="#!productdetail/:{{p.id}}">
+                            <img src="img/women/{{p.image}}" class="img-fluid" alt="">
+                            <div class=" row pb-0 justify-content-center">
+                                <div class=" p-0  col-xl-7 col-6 font">
+                                    <h5 class="" style="font-size: 1rem;">{{p.name}}</h5>
+                                    <p class="" style="font-size: 0.7rem;">{{p.des}}</p>
+                                </div>
+                                <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
+                                    {{p.price}}₫
+                                </p>
                             </div>
-                            <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
-                                {{p.price}}₫
-                            </p>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
 
                 </div>
 
@@ -306,142 +171,6 @@
             <!-- END CONTENT-MEN-SHOES -->
         </div>
     </div>
-    <!-- Footer -->
-    <footer class="justify-content-center text-lg-start text-muted mt-5">
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="justify-content-center text-md-start m-0 row">
-                <!-- Grid row -->
-                <div class="row mt-5 col-sm-7  ml-2">
-                    <!-- Grid column -->
-                    <div class="col-md-4 justify-content-start col-lg-4 col-xl-4 mx-auto mb-8">
-                        <!-- Links -->
-                        <p>
-                            <a href="#!" class="font-weight-bold">FIND A STORE</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="font-weight-bold">BECOME A MEMBER</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="font-weight-bold">SIGN UP FOR EMAIL</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="font-weight-bold">SEND US FEEDBACK</a>
-                        </p>
-                    </div>
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-8">
-                        <!-- Links -->
-                        <p>
-                            <a href="#!" class="font-weight-bold">GET HELP</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Order Status</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Delivery</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Returns</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Payment Options</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Contact Us</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-8">
-                        <!-- Links -->
-                        <p>
-                            <a href="#!" class="font-weight-bold">ABOUT NIKE</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">News</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Careers</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Investors</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Suntainebility</a>
-                        </p>
-                    </div>
-
-                </div>
-                <!-- Social -->
-                <div
-                    class="col-md-4 col-lg-3 col-xl-5 mx-auto mb-md-0 mb-4 pt-5 ml-0 col-sm-5 icon-link justify-content-end text-right">
-                    <div class="col">
-                        <a href="https://twitter.com/Nike" class="me-4 text-reset text-decoration-none ">
-                            <i class="justify-content-center text-center rounded-circle fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.facebook.com/nike" class="me-4 text-reset text-decoration-none ">
-                            <i class="justify-content-center text-center rounded-circle fab fa-facebook-f "></i>
-                        </a>
-
-                        <a href="https://www.youtube.com/user/nike" class="me-4 text-reset text-decoration-none ">
-                            <i class="justify-content-center text-center rounded-circle fab fa-youtube"></i>
-                        </a>
-                        <a href="https://instagram.com/nike" class="me-4 text-reset text-decoration-none ">
-                            <i class="justify-content-center text-center rounded-circle fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-
-            <a href="#!" class="font-weight-bold mr-4"><i class="fas fa-map-marker-alt mr-3"></i>Vietnam</a>
-            © 2023 Nike, Inc. All Rights Reserved
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-    <script>
-        const header = document.querySelector("#secondnav");
-        let lastScrollTop = 0;
-
-        window.addEventListener("scroll", function () {
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (st > lastScrollTop) {
-                header.classList.remove("visible");
-                header.classList.add("notvisible");
-
-                console.log("Scrolling down");
-
-            } else {
-                header.classList.add("visible");
-                header.classList.remove("notvisible");
-                if (st == 0) {
-                    header.classList.remove("visible");
-
-                }
-                console.log("Scrolling up");
-
-            }
-
-            lastScrollTop = st <= 0 ? 0 : st;
-        });
-         app = angular.module("myapp", []).controller("myCtrl", function ($scope,$http) {
-            $scope.products=[];
-            $http.get('Data/women-products.json').then(function(reponse){
-                console.log(1)
-                $scope.products = reponse.data;
-            });
-        });; 
-
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
