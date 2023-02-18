@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Men's Shoes. Nike VN</title>
+    <title>Women's Shoes. Nike VN</title>
     <link class="jordan" rel="icon" href="img/nikeicon.png" />
     <!-- JQWERY -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
@@ -84,7 +84,7 @@
                                 Women
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="Women-sshoes.html">Shoes</a>
+                                <a class="dropdown-item" href="#">Shoes</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Yoga
                                 </a>
@@ -286,7 +286,7 @@
                 <div class="lider row container-fluid ml-0 p-0">
                     <a href="" class="media-container justify-content-center col-xl-4 col-md-4 col-6  "
                         ng-repeat="p in products">
-                        <img src="img/men/{{p.image}}" class="img-fluid" alt="">
+                        <img src="img/women/{{p.image}}" class="img-fluid" alt="">
                         <div class=" row pb-0 justify-content-center">
                             <div class=" p-0  col-xl-7 col-6 font">
                                 <h5 class="" style="font-size: 1rem;">{{p.name}}</h5>
@@ -401,7 +401,7 @@
         <!-- Copyright -->
         <div class="p-4" style="background-color: rgba(0, 0, 0, 0.05);">
 
-            <a href="" class="font-weight-bold mr-4"><i class="fas fa-map-marker-alt mr-3"></i>Vietnam</a>
+            <a href="#!" class="font-weight-bold mr-4"><i class="fas fa-map-marker-alt mr-3"></i>Vietnam</a>
             © 2023 Nike, Inc. All Rights Reserved
         </div>
         <!-- Copyright -->
@@ -433,13 +433,13 @@
 
             lastScrollTop = st <= 0 ? 0 : st;
         });
-        var app = angular.module("myapp", []).controller("myCtrl", function ($scope,$http) {
+         app = angular.module("myapp", []).controller("myCtrl", function ($scope,$http) {
             $scope.products=[];
-            $http.get('Data/men-products.json').then(function(reponse){
+            $http.get('Data/women-products.json').then(function(reponse){
                 console.log(1)
                 $scope.products = reponse.data;
             });
-        });
+        });; 
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

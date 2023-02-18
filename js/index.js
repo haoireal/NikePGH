@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 const list = document.querySelector("#active-carousel");
 const items = list.querySelectorAll("li");
 const productList = document.querySelector("#active-carousel-product");

@@ -7,7 +7,25 @@
   transition: all 0.2s linear;
   font-family: Nike TG, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
-
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
 .container-body {
   height: 100%;
   border: 12px solid black;
@@ -57,8 +75,9 @@ svg {
   padding-right: 36px;
 }
 
-a {
-  text-decoration: none;
+a ,
+a:hover{
+  text-decoration: none !important;
   color: #111;
 }
 
@@ -210,12 +229,19 @@ footer {
 #content .carousel ol {
   background-color: #f3f3f371 !important;
   bottom: -2.5rem !important;
+  
 }
 
 #content .carousel ol li {
   background-color: #000000 !important;
 
 }
+
+#content .carousel a:hover {
+ text-decoration: none;
+color: inherit;
+}
+
 
 #content #dontmiss {
   margin-top: 4.5rem;
