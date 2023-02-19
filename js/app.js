@@ -12,6 +12,10 @@ app.config(function ($routeProvider) {
       templateUrl: "Women-sshoes.html?" + Math.random(),
       controller: "WomenshoesCtrl",
     })
+    .when("/kidshoes", {
+      templateUrl: "Kid.shoes.html?" + Math.random(),
+      controller: "KidshoesCtrl",
+    })
     .when("/productdetail/:productId", {
       templateUrl: "productsdetail.html?" + Math.random(),
       controller: "ProductDetailCtrl",
@@ -41,6 +45,8 @@ app.controller(
     });
   }
 );
+
+//!PRODUCT DETAIL CONTROL
 app.controller(
   "ProductDetailCtrl",
   function ($scope, $rootScope, $routeParams, $http) {

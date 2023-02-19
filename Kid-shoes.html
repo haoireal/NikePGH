@@ -1,0 +1,196 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men's Shoes. Nike VN</title>
+    <link class="jordan" rel="icon" href="img/nikeicon.png" />
+    <!-- JQWERY -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link class="jordan" rel="stylesheet" href="cssGH/index.css" />
+    <link rel="stylesheet" href="cssGH/shoes.css">
+</head>
+
+<body ng-app="myapp">
+    <div class="container-fluid">
+        <div class="wall-header-offset p-1"></div>
+
+        <div id="header-content" class="row container-fluid m-0 mt-4 justify-content-center">
+            <h4 class="col-xl-10 col-md-8 col-sm-5 col-6 p-0 m-0">Men's Shoes(374)</h4>
+
+            <div id="hide-sort" class="col-xl-2 col-md-4 col-sm-6 col-6 p-0 m-0 d-flex justify-content-end">
+                <button class=" border-0 p-0 pr-3 bg-white font-weight-lighter">Show Filters <i
+                        class="fas fa-sliders-h"></i></button>
+            </div>
+        </div>
+        <div class="wall-header-offset p-3"></div>
+        <div id="contentMen-Shoes" class="container-flui row">
+            <!-- ASIDE -->
+            <div class="aside-container col-xl-3 col-md-4">
+                <aside>
+                    <div class="filter">
+                        <button class="btn btn-default" type="button" data-toggle="collapse"
+                            data-target="#mobile-filter" aria-expanded="false" aria-controls="mobile-filter"> <i
+                                class="fas fa-sliders-h"></i></button>
+                    </div>
+                    <div id="mobile-filter">
+                        <div>
+                            <h6 class="p-1 border-bottom">Home Furniture</h6>
+                            <ul>
+                                <li><a href="#">Living</a></li>
+                                <li><a href="#">Dining</a></li>
+                                <li><a href="#">Office</a></li>
+                                <li><a href="#">Bedroom</a></li>
+                                <li><a href="#">Kitchen</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="p-1 border-bottom">Filter By</h6>
+                            <p class="mb-2">Color</p>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#">
+                                        <span class="fa fa-circle pr-1" id="red"></span>Red
+                                    </a></li>
+                                <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#">
+                                        <span class="fa fa-circle pr-1" id="teal"></span>Teal
+                                    </a></li>
+                                <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#">
+                                        <span class="fa fa-circle pr-1" id="blue"></span>Blue
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Type</h6>
+                            <form class="ml-md-2">
+                                <div class="form-inline border rounded p-sm-2 my-2">
+                                    <input type="radio" name="type" id="boring">
+                                    <label for="boring" class="pl-1 pt-sm-0 pt-1">Boring</label>
+                                </div>
+                                <div class="form-inline border rounded p-sm-2 my-2">
+                                    <input type="radio" name="type" id="ugly">
+                                    <label for="ugly" class="pl-1 pt-sm-0 pt-1">Ugly</label>
+                                </div>
+                                <div class="form-inline border rounded p-md-2 p-sm-1">
+                                    <input type="radio" name="type" id="notugly">
+                                    <label for="notugly" class="pl-1 pt-sm-0 pt-1">Not Ugly</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <section id="sidebar">
+                        <div>
+                            <h6 class="p-1 border-bottom">Home Furniture</h6>
+                            <ul>
+                                <li><a href="#">Living</a></li>
+                                <li><a href="#">Dining</a></li>
+                                <li><a href="#">Office</a></li>
+                                <li><a href="#">Bedroom</a></li>
+                                <li><a href="#">Kitchen</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="p-1 border-bottom">Filter By</h6>
+                            <p class="mb-2">Color</p>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#">
+                                        <span class="fa fa-circle pr-1" id="red"></span>Red
+                                    </a></li>
+                                <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#">
+                                        <span class="fa fa-circle pr-1" id="teal"></span>Teal
+                                    </a></li>
+                                <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#">
+                                        <span class="fa fa-circle pr-1" id="blue"></span>Blue
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Type</h6>
+                            <form class="ml-md-2">
+                                <div class="form-inline border rounded p-sm-2 my-2">
+                                    <input type="radio" name="type" id="boring">
+                                    <label for="boring" class="pl-1 pt-sm-0 pt-1">Boring</label>
+                                </div>
+                                <div class="form-inline border rounded p-sm-2 my-2">
+                                    <input type="radio" name="type" id="ugly">
+                                    <label for="ugly" class="pl-1 pt-sm-0 pt-1">Ugly</label>
+                                </div>
+                                <div class="form-inline border rounded p-md-2 p-sm-1">
+                                    <input type="radio" name="type" id="notugly">
+                                    <label for="notugly" class="pl-1 pt-sm-0 pt-1">Not Ugly</label>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+
+
+
+            <!-- PRODUCT MEN-SHOES -->
+            <div id="my-pics" class="mb-5 position-relative col-xl-9 col-md-8">
+                <!-- Indicators -->
+                <!-- PRODUCT-ROW-COL3 -->
+                <div class="lider row container-fluid ml-0 p-0">
+                    <div class="media-container justify-content-center col-xl-4 col-md-4 col-6  "
+                        ng-repeat="p in products">
+
+                        <a href="#!productdetail/:{{p.id}}">
+                            <img src="img/kid/{{p.image}}" class="img-fluid" alt="">
+                            <div class=" row pb-0 justify-content-center">
+                                <div class=" p-0  col-xl-7 col-6 font">
+                                    <h5 class="" style="font-size: 1rem;">{{p.name}}</h5>
+                                    <p class="" style="font-size: 0.7rem;">{{p.des}}</p>
+                                </div>
+                                <p class=" col-4  col-xl-4  text-right p-0" style="font-size: 0.9rem;">
+                                    {{p.price}}₫
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- END PRODUCT MEN SHOES  -->
+            </div>
+
+            <!-- END CONTENT-MEN-SHOES -->
+        </div>
+    </div>
+    <!-- Footer -->
+
+    <!-- Footer -->
+    <script>
+
+        // var app = angular.module("myapp", []).controller("myCtrl", function ($scope, $http) {
+        //     $scope.products = [];
+        //     $http.get('Data/men-products.json').then(function (reponse) {
+        //         console.log(1)
+        //         $scope.products = reponse.data;
+        //     });
+        // });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
