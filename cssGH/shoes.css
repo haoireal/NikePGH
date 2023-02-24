@@ -218,3 +218,29 @@ li a:hover {
     display: none;
   }
 }
+
+#more{
+  width: 100%;
+  border: none;
+  background-color: inherit;
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+.animated-scroll {
+  animation-name: scroll;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
