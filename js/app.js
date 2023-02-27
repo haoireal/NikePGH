@@ -132,7 +132,6 @@ app.controller(
       }
       // Nếu sản phẩm đã tồn tại trong giỏ hàng, tăng số lượng sản phẩm đó lên
       if (index != -1) {
-        product.quantity++;
         $rootScope.cart[$rootScope.cart.index - 1].quantity++;
       }
       // Nếu sản phẩm chưa tồn tại trong giỏ hàng, thêm sản phẩm đó vào giỏ hàng
@@ -167,47 +166,7 @@ app.controller("SizeController", function ($scope) {
 
 //!CART
 app.controller("CartlCtrl", function ($scope, $rootScope, $routeParams, $http) {
-  console.log($rootScope.cart);
-  $rootScope.sumMoney = 0;
-  if (typeof $rootScope.cart != "undefined") {
-    for (var i = 0; i < $rootScope.cart.length; i++) {
-      // Lấy thẻ select
-      var select = $("#quantitySelect");
-
-      // Gán sự kiện change cho thẻ select
-      select.change(function () {
-        // Lấy giá trị được chọn từ thẻ select
-        $rootScope.cart[i].quantity = $(this).val();
-        console.log($rootScope.cart[i].quantity);
-        for (var i = 0; i < $rootScope.cart.length; i++) {
-          $rootScope.sumMoney =
-            $rootScope.sumMoney +
-            $rootScope.cart[i].quantity * $rootScope.cart[i].price;
-        }
-      });
-    }
-  }
-  if (typeof $rootScope.cart != "undefined") {
-    //Có giỏ hàng mới tính tổng
-    for (var i = 0; i < $rootScope.cart.length; i++) {
-      $rootScope.sumMoney =
-        $rootScope.sumMoney +
-        $rootScope.cart[i].quantity * $rootScope.cart[i].price;
-    }
-  }
-
-  //Xóa sản phẩm trong giỏ hàng
-  $scope.delProduct = function (index) {
-    $rootScope.cart.splice(index - 1, 1);
-    if (typeof $rootScope.cart != "undefined") {
-      $rootScope.sumMoney = 0;
-      for (var i = 0; i < $rootScope.cart.length; i++) {
-        $rootScope.sumMoney =
-          $rootScope.sumMoney +
-          $rootScope.cart[i].quantity * $rootScope.cart[i].price;
-      }
-    }
-  };
+  
   $scope.sizes = [
     "EU 36",
     "EU 37",
@@ -222,4 +181,42 @@ app.controller("CartlCtrl", function ($scope, $rootScope, $routeParams, $http) {
   ];
   // Quantity data
   $scope.quantities = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  console.log($rootScope.cart);
+  $rootScope.sumMoney = 0;
+  if (typeof $rootScope.cart != "undefined") {
+    
+    for (var i = 0; i < $rootScope.cart.length; i++) {
+      // Lấy thẻ select
+      var select = $("#quantitySelect");
+     
+      
+
+    }
+  }
+  if (typeof $rootScope.cart != "undefined") {
+    //Có giỏ hàng mới tính tổng
+    for (var i = 0; i < $rootScope.cart.length; i++) {
+      $rootScope.sumMoney =
+        $rootScope.sumMoney +
+        $rootScope.cart[i].quantity * $rootScope.cart[i].price;
+    }
+  }
+  
+  //Xóa sản phẩm trong giỏ hàng
+  $scope.delProduct = function (index) {
+    $rootScope.cart.splice(index - 1, 1);
+    if (typeof $rootScope.cart != "undefined") {
+      $rootScope.sumMoney = 0;
+      for (var i = 0; i < $rootScope.cart.length; i++) {
+        $rootScope.sumMoney =
+          $rootScope.sumMoney +
+          $rootScope.cart[i].quantity * $rootScope.cart[i].price;
+      }
+    }
+  };
+
+  //!SETQUANTITY
+  
+
+  
 });

@@ -158,7 +158,7 @@
                                             <label for="sizeSelect" class="col-3 m-0 p-0">Size:</label>
                                             <div class="width-size" >
                                                 <select class="form-control col-9 m-0 p-0" id="sizeSelect" >
-                                                    <option ng-repeat="size in sizes" value="size-{{size}}">{{size}}</option>
+                                                    <option ng-repeat="size in sizes" value="{{size}}">{{size}}</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -166,8 +166,8 @@
                                         <div class="form-group row col-6">
                                             <label for="quantitySelect" class="col-3 m-0 p-0">Quantity:</label>
                                             <div class="width-size2">
-                                                <select class="form-control col-9 m-0 p-0" id="quantitySelect" >
-                                                    <option ng-repeat="quantitie in quantities" value="{{quantitie}}">{{quantitie}}</option>
+                                                <select class="form-control col-9 m-0 p-0" id="quantitySelect">
+                                                    <option ng-repeat="quantity in quantities" ng-selected="quantity == {{product.quantity}}" value="{{quantity}}">{{quantity}}</option>
                                                 </select>
                                             </div>
                                         </div>
